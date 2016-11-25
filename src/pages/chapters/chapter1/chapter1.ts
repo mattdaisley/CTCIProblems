@@ -18,7 +18,7 @@ export class Chapter1Page {
     // If we navigated to this page, we will have an item available as a nav param
 
     this.problems = [
-        { title: 'Problem 1.5' , component: OneFivePage }
+        { title: 'Problem 1.5 - Compress String' , component: OneFivePage }
     ];
     
   }
