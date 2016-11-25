@@ -3,10 +3,10 @@ export class IsUnique {
     
     constructor() { }
     
-    validate( input ): string {
+    validate( input ): boolean {
         var arrInput: Array<string> = input.split('');
 
-        var strAnswer: string = '';
+        var strAnswer: boolean = false;
         
         return strAnswer;
     }

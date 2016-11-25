@@ -19,16 +19,14 @@ export class OneOnePage {
   code: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public chapterCodeService: ChapterCodeService) {
-    // If we navigated to this page, we will have an item available as a nav param
+    this.chapterCodeService.getCode( 'chapter1/1.1/IsUnique.ts' )
+      .then( code => this.code = code );
   }
 
   runTest1() {
 
     var isUnique = new IsUnique();
 
-    this.answer1 = isUnique.validate( this.test1 ); 
-
-    this.chapterCodeService.getCode( 'chapter1/1.1/IsUnique.ts' )
-      .then( code => this.code = code );
+    this.answer1 = isUnique.validate( this.test1 ).toString(); 
   }
 }

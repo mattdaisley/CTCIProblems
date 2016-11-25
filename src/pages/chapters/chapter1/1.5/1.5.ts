@@ -19,15 +19,13 @@ export class OneFivePage {
   code: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public chapterCodeService: ChapterCodeService) {
-    // If we navigated to this page, we will have an item available as a nav param
+    this.chapterCodeService.getCode( 'chapter1/1.5/Compressor.ts' )
+      .then( code => this.code = code );
   }
 
   runTest1() {
 
     var compressor = new Compressor( );
     this.answer1 = compressor.compress( this.test1 ); 
-
-    this.chapterCodeService.getCode( 'chapter1/1.5/Compressor.ts' )
-      .then( code => this.code = code );
   }
 }

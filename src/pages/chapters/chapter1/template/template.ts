@@ -17,14 +17,12 @@ export class TemplatePage {
   code: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public chapterCodeService: ChapterCodeService) {
-    // If we navigated to this page, we will have an item available as a nav param
+    this.chapterCodeService.getCode( 'chapter{NUM}/{PROBELM}/{SOLUTION}.ts' )
+      .then( code => this.code = code );
   }
 
   runTest1() {
 
     this.answer1 = ''; 
-
-    this.chapterCodeService.getCode( 'chapter{NUM}/{PROBELM}/{SOLUTION}.ts' )
-      .then( code => this.code = code );
   }
 }
