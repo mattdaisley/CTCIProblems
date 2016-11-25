@@ -24,15 +24,14 @@
                     Run
                 </button>
             </ion-item>
+
+            <ion-item *ngIf="answer1">
+                Answer: {{answer1}}
+            </ion-item>
         </ion-card-content>
     </ion-card>
 
     <ion-card *ngIf="answer1">
-        <ion-card-header>
-            <ion-item>
-                Answer: {{answer1}}
-            </ion-item>
-        </ion-card-header>
         <ion-card-content>
            <div ace-editor
             [text]="code"
