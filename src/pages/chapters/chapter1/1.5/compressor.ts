@@ -14,6 +14,8 @@ export class Compressor {
         var arrAnswer: Array<charTracker> = [];
         var strAnswer: string = '';
 
+        if ( input.length === 0 ) return input;
+
         arrInput.forEach( (char, index) => {
             if ( arrAnswer.length > 0 ) {
                 if ( arrAnswer[uniqueCounter].key === char ) {
@@ -27,10 +29,12 @@ export class Compressor {
             }
         });
 
+        if ( arrAnswer.length >= arrInput.length ) return input;
+
         for ( var index in arrAnswer ) {
             strAnswer += arrAnswer[index].key + arrAnswer[index].count;
         }
-
+        
         return strAnswer;
     }
 }

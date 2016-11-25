@@ -17,6 +17,7 @@ export class OneFivePage {
   answer1: string;
 
   code: string;
+  options: { useWorker: false };
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public chapterCodeService: ChapterCodeService) {
     // If we navigated to this page, we will have an item available as a nav param
