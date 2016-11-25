@@ -9,6 +9,8 @@ import { HomePage } from '../pages/home/home';
 import { Chapter1Page } from '../pages/chapters';
 import { OneFivePage } from '../pages/chapters';
 
+import { ChapterCodeService } from '../pages/chapters/chapter.code.service';
+
 import { AceEditorDirective } from 'ng2-ace-editor'; 
 
 @NgModule({
@@ -33,6 +35,9 @@ import { AceEditorDirective } from 'ng2-ace-editor';
     Chapter1Page,
     OneFivePage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ChapterCodeService
+  ]
 })
 export class AppModule {}
