@@ -13,11 +13,12 @@ export class ChapterCodeService {
   }
 
   getCode( file: string ): Promise<string> {
-    return new Promise<string>( resolve => {
-      this.http.get( this.baseUrl + file )
-      .map(response => response.text())
-      .subscribe(data => resolve(data));
-    });
+      var random = Math.random();
+      return new Promise<string>( resolve => {
+        this.http.get( this.baseUrl + file + '?rand=' + random )
+        .map(response => response.text())
+        .subscribe(data => resolve(data));
+      });
   }
 
 }
