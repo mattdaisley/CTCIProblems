@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 import { NavController, NavParams } from 'ionic-angular';
 
+import { OneOnePage } from './1.1/1.1'
 import { OneFivePage } from './1.5/1.5'
 
 
@@ -18,6 +19,7 @@ export class Chapter1Page {
     // If we navigated to this page, we will have an item available as a nav param
 
     this.problems = [
+        { title: 'Problem 1.1 - Unique Characters in String', component: OneOnePage },
         { title: 'Problem 1.5 - Compress String' , component: OneFivePage }
     ];
     

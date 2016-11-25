@@ -4,16 +4,16 @@ import { NavController, NavParams } from 'ionic-angular';
 
 import { ChapterCodeService } from '../../chapter.code.service';
 
-import { Compressor } from './Compressor';
+import { IsUnique } from './IsUnique';
 
 
 @Component({
   templateUrl: 'template.html'
 })
-export class OneFivePage {
-  public title: string = 'Problem 1.5 - Compress String';
+export class OneOnePage {
+  public title: string = 'Problem 1.1 - Unique Characters in String';
 
-  test1: string = 'aabcccccaaa';
+  test1: string = 'abcdefghijklmnop';
   answer1: string;
 
   code: string;
@@ -24,10 +24,11 @@ export class OneFivePage {
 
   runTest1() {
 
-    var compressor = new Compressor( );
-    this.answer1 = compressor.compress( this.test1 ); 
+    var isUnique = new IsUnique();
 
-    this.chapterCodeService.getCode( 'chapter1/1.5/Compressor.ts' )
+    this.answer1 = isUnique.validate( this.test1 ); 
+
+    this.chapterCodeService.getCode( 'chapter1/1.1/IsUnique.ts' )
       .then( code => this.code = code );
   }
 }
