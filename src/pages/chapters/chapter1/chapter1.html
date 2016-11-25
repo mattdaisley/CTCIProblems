@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar>
+    <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{chapterTitle}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <button ion-item *ngFor="let prob of problems" (click)="problemSelected($event, prob)">
+            {{prob.title}}
+        </button>
+    </ion-list>
+</ion-content>

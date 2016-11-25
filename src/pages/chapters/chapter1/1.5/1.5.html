@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar>
+    <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{title}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+        <ion-card-header>
+            Implement a method to perform basic string compression using the counts of repeated characters.
+        </ion-card-header>
+        <ion-card-content>
+            <ion-item>
+                <ion-label>Input</ion-label>
+                <ion-input type="text" [(ngModel)]="test1"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <button ion-button icon-left clear item-left (click)="runTest1()">
+                    <ion-icon name="arrow-forward"></ion-icon>
+                    Run
+                </button>
+            </ion-item>
+        </ion-card-content>
+    </ion-card>
+
+    <ion-card *ngIf="answer1">
+        <ion-card-header>
+            <ion-item>
+                Answer: {{answer1}}
+            </ion-item>
+        </ion-card-header>
+        <ion-card-content>
+           <div ace-editor
+            [text]="code"
+            [mode]="'javascript'"
+            [theme]="'monokai'"
+            [options]="options"
+            [readOnly]="true"
+            style="min-height: 200px; width:100%; overflow: auto;"></div>
+        </ion-card-content>
+    </ion-card>
+</ion-content>
