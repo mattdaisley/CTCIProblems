@@ -28,6 +28,6 @@ export class OneFivePage {
     this.answer1 = compressor.compress( this.test1 ); 
 
     this.chapterCodeService.getCode( 'chapter1/1.5/compressor.ts' )
-      .then( code => this.code = code );;
+      .then( code => this.code = code );
   }
 }
