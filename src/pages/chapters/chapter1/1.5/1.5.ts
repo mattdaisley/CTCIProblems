@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, AfterViewInit } from '@angular/core';
 
 import { NavController, NavParams } from 'ionic-angular';
 
@@ -10,7 +10,9 @@ import { Compressor } from './Compressor';
 @Component({
   templateUrl: 'template.html'
 })
-export class OneFivePage {
+export class OneFivePage implements AfterViewInit {
+  @ViewChild('editor') editor;
+
   public title: string = 'Problem 1.5 - Compress String';
 
   test1: string = 'aabcccccaaa';
@@ -21,6 +23,10 @@ export class OneFivePage {
   constructor(public navCtrl: NavController, public navParams: NavParams, public chapterCodeService: ChapterCodeService) {
     this.chapterCodeService.getCode( 'chapter1/1.5/Compressor.ts' )
       .then( code => this.code = code );
+  }
+
+  ngAfterViewInit() {
+    this.editor.getEditor().getSession().setUseWorker(false);
   }
 
   runTest1() {

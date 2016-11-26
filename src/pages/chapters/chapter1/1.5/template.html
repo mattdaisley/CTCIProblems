@@ -13,6 +13,11 @@
             <div>
                 Implement a method to perform basic string compression using the counts of repeated characters. For example, the string aabcccccaaa would become a2b1c5a3. If the "compressed" string would not become smaller than the original string your method should return the original string.
             </div>
+        </ion-card-content>
+    </ion-card>
+    
+    <ion-card>
+        <ion-card-content>
             <ion-item>
                 <ion-label>Input</ion-label>
                 <ion-input type="text" [(ngModel)]="test1"></ion-input>
@@ -33,13 +38,14 @@
 
     <ion-card>
         <ion-card-content>
-           <div ace-editor
+           <ace-editor
+            #editor
             [text]="code"
             [mode]="'javascript'"
             [theme]="'monokai'"
             [options]="options"
             [readOnly]="true"
-            style="min-height: 400px; width:100%; overflow: auto;"></div>
+            style="min-height: 400px; width:100%; overflow: auto;"></ace-editor>
         </ion-card-content>
     </ion-card>
 </ion-content>

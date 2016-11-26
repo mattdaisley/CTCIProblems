@@ -33,13 +33,14 @@
 
     <ion-card *ngIf="answer1">
         <ion-card-content>
-           <div ace-editor
+           <ace-editor
+            #editor
             [text]="code"
             [mode]="'javascript'"
             [theme]="'monokai'"
             [options]="options"
             [readOnly]="true"
-            style="min-height: 400px; width:100%; overflow: auto;"></div>
+            style="min-height: 400px; width:100%; overflow: auto;"></ace-editor>
         </ion-card-content>
     </ion-card>
 </ion-content>

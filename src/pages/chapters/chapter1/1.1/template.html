@@ -11,8 +11,13 @@
     <ion-card>
         <ion-card-content>
             <div>
-                Description
+                Implement an algorithm to determine if a string has all unique characters. What if you cannot use additional data structures?
             </div>
+        </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+        <ion-card-content>
             <ion-item>
                 <ion-label>Input</ion-label>
                 <ion-input type="text" [(ngModel)]="test1"></ion-input>
@@ -33,13 +38,34 @@
 
     <ion-card>
         <ion-card-content>
-           <div ace-editor
+            <ion-item>
+                <ion-label>Input</ion-label>
+                <ion-input type="text" [(ngModel)]="test2"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <button ion-button icon-left clear item-left (click)="runTest2()">
+                    <ion-icon name="arrow-forward"></ion-icon>
+                    Run
+                </button>
+            </ion-item>
+
+            <ion-item *ngIf="answer2">
+                Answer: {{answer2}}
+            </ion-item>
+        </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+        <ion-card-content>
+          <ace-editor
+            #editor
             [text]="code"
             [mode]="'javascript'"
             [theme]="'monokai'"
             [options]="options"
             [readOnly]="true"
-            style="min-height: 400px; width:100%; overflow: auto;"></div>
+            style="min-height: 400px; width:100%; overflow: auto;"></ace-editor>
         </ion-card-content>
     </ion-card>
 </ion-content>

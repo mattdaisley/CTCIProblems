@@ -11,7 +11,7 @@ import { OneOnePage, OneFivePage } from '../pages/chapters';
 
 import { ChapterCodeService } from '../pages/chapters/chapter.code.service';
 
-import { AceEditorDirective } from 'ng2-ace-editor'; 
+import { AceEditorDirective, AceEditorComponent } from 'ng2-ace-editor'; 
 
 @NgModule({
   declarations: [
@@ -19,6 +19,7 @@ import { AceEditorDirective } from 'ng2-ace-editor';
     HomePage,
 
     AceEditorDirective,
+    AceEditorComponent,
 
     Chapter1Page,
     OneOnePage,

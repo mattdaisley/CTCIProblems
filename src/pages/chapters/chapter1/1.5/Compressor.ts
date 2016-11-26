@@ -5,8 +5,6 @@ interface charTracker {
 
 export class Compressor {
     
-    constructor() { }
-    
     compress( input ): string {
         var arrInput: Array<string> = input.split('');
 

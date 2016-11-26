@@ -1,13 +1,18 @@
-
 export class IsUnique {
     
-    constructor() { }
-    
     validate( input ): boolean {
-        var arrInput: Array<string> = input.split('');
 
-        var strAnswer: boolean = false;
-        
-        return strAnswer;
+        let arrInput: Array<string> = input.split('').sort();
+
+        var lastLetter: string;
+
+        for (let char of arrInput) {
+            if ( char === lastLetter ) {
+                return false;
+            }
+            lastLetter = char;
+        }
+
+        return true;
     }
 }
