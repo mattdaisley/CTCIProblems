@@ -15,14 +15,21 @@ export class OneFivePage implements AfterViewInit {
 
   public title: string = 'Problem 1.5 - Compress String';
 
+  solutionUrl: string = 'chapter1/1.5/Compressor.ts';
+
   test1: string = 'aabcccccaaa';
   answer1: string;
 
   code: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public chapterCodeService: ChapterCodeService) {
-    this.chapterCodeService.getCode( 'chapter1/1.5/Compressor.ts' )
-      .then( code => this.code = code );
+    // this.chapterCodeService.getCode( 'chapter1/1.5/Compressor.ts' )
+    //   .then( code => this.code = code );
+
+   this.chapterCodeService.getCode( this.solutionUrl )
+      .subscribe(
+        code => this.code = code,
+        error => this.code = `'Error getting contents of ${this.solutionUrl}'`);
   }
 
   ngAfterViewInit() {

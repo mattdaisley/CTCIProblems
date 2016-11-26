@@ -11,11 +11,17 @@
     <ion-card>
         <ion-card-content>
             <div>
-                Description
+                Given two strings, write a method to decide if one is a permuation of the other.
             </div>
+        </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+        <ion-card-content>
             <ion-item>
                 <ion-label>Input</ion-label>
-                <ion-input type="text" [(ngModel)]="test1"></ion-input>
+                <ion-input type="text" [(ngModel)]="test1string1"></ion-input>
+                <ion-input type="text" [(ngModel)]="test1string2"></ion-input>
             </ion-item>
 
             <ion-item>
@@ -31,9 +37,30 @@
         </ion-card-content>
     </ion-card>
 
-    <ion-card *ngIf="answer1">
+    <ion-card>
         <ion-card-content>
-           <ace-editor
+            <ion-item>
+                <ion-label>Input</ion-label>
+                <ion-input type="text" [(ngModel)]="test2string1"></ion-input>
+                <ion-input type="text" [(ngModel)]="test2string2"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <button ion-button icon-left clear item-left (click)="runTest2()">
+                    <ion-icon name="arrow-forward"></ion-icon>
+                    Run
+                </button>
+            </ion-item>
+
+            <ion-item *ngIf="answer2">
+                Answer: {{answer2}}
+            </ion-item>
+        </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+        <ion-card-content>
+          <ace-editor
             #editor
             [text]="code"
             [mode]="'javascript'"

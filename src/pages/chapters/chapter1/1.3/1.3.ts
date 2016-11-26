@@ -4,29 +4,31 @@ import { NavController, NavParams } from 'ionic-angular';
 
 import { ChapterCodeService } from '../../chapter.code.service';
 
-import { IsUnique } from './IsUnique';
+import { IsPermutation } from './IsPermutation';
 
 
 @Component({
   templateUrl: 'template.html'
 })
-export class OneOnePage implements AfterViewInit {
+export class OneThreePage implements AfterViewInit {
   @ViewChild('editor') editor;
 
-  public title: string = 'Problem 1.1 - Unique Characters in String';
+  public title: string = 'Problem 1.2 - Permutation';
 
-  solutionUrl: string = 'chapter1/1.1/IsUnique.ts';
+  solutionUrl: string = 'chapter1/1.3/IsPermutation.ts';
 
-  test1: string = 'abcdefmnopghijkl.-3410$~';
+  test1string1: string = 'abcdefghijklmnop';
+  test1string2: string = 'ponmlkjihgfedcba';
   answer1: string;
 
-  test2: string = 'aaabbbecadflksdk';
+  test2string1: string = 'abbccceeefffff';
+  test2string2: string = 'ooommmnnnpppoo';
   answer2: string;
 
   code: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public chapterCodeService: ChapterCodeService) {
-    // this.chapterCodeService.getCode( 'chapter1/1.1/IsUnique.ts' )
+    // this.chapterCodeService.getCode( 'chapter1/1.3/IsPermutation.ts' )
     //   .then( code => this.code = code );
 
     this.chapterCodeService.getCode( this.solutionUrl )
@@ -41,15 +43,15 @@ export class OneOnePage implements AfterViewInit {
 
   runTest1() {
 
-    var isUnique = new IsUnique();
+    let isPermutation = new IsPermutation();
 
-    this.answer1 = isUnique.validate( this.test1 ).toString(); 
+    this.answer1 = isPermutation.validate( this.test1string1, this.test1string2 ).toString(); 
   }
 
   runTest2() {
 
-    var isUnique = new IsUnique();
+    let isPermutation = new IsPermutation();
 
-    this.answer2 = isUnique.validate( this.test2 ).toString(); 
+    this.answer2 = isPermutation.validate( this.test2string1, this.test2string2 ).toString(); 
   }
 }
