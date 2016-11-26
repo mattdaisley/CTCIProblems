@@ -4,32 +4,28 @@ import { NavController, NavParams } from 'ionic-angular';
 
 import { ChapterCodeService } from '../../chapter.code.service';
 
-import { IsPermutation } from './IsPermutation';
+import { ReplaceSpaces } from './ReplaceSpaces';
 
 
 @Component({
   templateUrl: 'template.html'
 })
-export class OneThreePage implements AfterViewInit {
+export class OneFourPage implements AfterViewInit {
   @ViewChild('editor') editor;
 
-  public title: string = 'Problem 1.3 - Permutation';
+  public title: string = 'Problem 1.4 - Replace Spaces';
 
-  solutionUrl: string = 'chapter1/1.3/IsPermutation.ts';
+  solutionUrl: string = 'chapter1/1.4/ReplaceSpaces.ts';
 
-  test1string1: string = 'abcdefghijklmnop';
-  test1string2: string = 'ponmlkjihgfedcba';
+  test1string1: string = 'Mr John Smith    ';
   answer1: string;
 
-  test2string1: string = 'abbccceeefffff';
-  test2string2: string = 'ooommmnnnpppoo';
+  test2string1: string = 'This is only a test';
   answer2: string;
 
   code: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public chapterCodeService: ChapterCodeService) {
-    // this.chapterCodeService.getCode( 'chapter1/1.3/IsPermutation.ts' )
-    //   .then( code => this.code = code );
 
     this.chapterCodeService.getCode( this.solutionUrl )
       .subscribe(
@@ -43,15 +39,15 @@ export class OneThreePage implements AfterViewInit {
 
   runTest1() {
 
-    let isPermutation = new IsPermutation();
+    let replaceSpaces = new ReplaceSpaces();
 
-    this.answer1 = isPermutation.validate( this.test1string1, this.test1string2 ).toString(); 
+    this.answer1 = replaceSpaces.replace( this.test1string1 ).toString(); 
   }
 
   runTest2() {
 
-    let isPermutation = new IsPermutation();
+    let replaceSpaces = new ReplaceSpaces();
 
-    this.answer2 = isPermutation.validate( this.test2string1, this.test2string2 ).toString(); 
+    this.answer2 = replaceSpaces.replace( this.test2string1 ).toString(); 
   }
 }

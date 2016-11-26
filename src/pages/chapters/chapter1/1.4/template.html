@@ -1,0 +1,83 @@
+<ion-header>
+  <ion-navbar>
+    <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{title}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+        <ion-card-content>
+            <div>
+                Write a method to replace all spaces in a string with '%20'. You may assume that the string has sufficient space at the end of the string to hold the additional characters, and that you are given the "true" length of the string. (Note: If implementing in Java, please use a character array so that you can perform this operation in place.)
+            </div>
+            <p> 
+                EXAMPLE
+            </p>
+            <p>
+                Input: &nbsp; "Mr John Smith &nbsp; &nbsp; ", 13
+            </p>
+            <p> 
+                Output:"Mr%20John%20Smith"
+            </p>
+
+        </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+        <ion-card-content>
+            <ion-item>
+                <ion-label>Input</ion-label>
+                <ion-input type="text" [(ngModel)]="test1string1"></ion-input>
+                <ion-input type="text" [(ngModel)]="test1string2"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <button ion-button icon-left clear item-left (click)="runTest1()">
+                    <ion-icon name="arrow-forward"></ion-icon>
+                    Run
+                </button>
+            </ion-item>
+
+            <ion-item *ngIf="answer1">
+                Answer: {{answer1}}
+            </ion-item>
+        </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+        <ion-card-content>
+            <ion-item>
+                <ion-label>Input</ion-label>
+                <ion-input type="text" [(ngModel)]="test2string1"></ion-input>
+                <ion-input type="text" [(ngModel)]="test2string2"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <button ion-button icon-left clear item-left (click)="runTest2()">
+                    <ion-icon name="arrow-forward"></ion-icon>
+                    Run
+                </button>
+            </ion-item>
+
+            <ion-item *ngIf="answer2">
+                Answer: {{answer2}}
+            </ion-item>
+        </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+        <ion-card-content>
+          <ace-editor
+            #editor
+            [text]="code"
+            [mode]="'javascript'"
+            [theme]="'monokai'"
+            [options]="options"
+            [readOnly]="true"
+            style="min-height: 400px; width:100%; overflow: auto;"></ace-editor>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

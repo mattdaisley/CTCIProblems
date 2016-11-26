@@ -4,6 +4,7 @@ import { NavController, NavParams } from 'ionic-angular';
 
 import { OneOnePage } from './1.1/1.1';
 import { OneThreePage } from './1.3/1.3';
+import { OneFourPage } from './1.4/1.4';
 import { OneFivePage } from './1.5/1.5';
 
 
@@ -22,6 +23,7 @@ export class Chapter1Page {
     this.problems = [
         { title: 'Problem 1.1 - Unique Characters in String', component: OneOnePage },
         { title: 'Problem 1.3 - Permutation', component: OneThreePage },
+        { title: 'Problem 1.4 - Replace Spaces', component: OneFourPage },
         { title: 'Problem 1.5 - Compress String' , component: OneFivePage }
     ];
     

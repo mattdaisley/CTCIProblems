@@ -7,7 +7,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
 import { Chapter1Page } from '../pages/chapters';
-import { OneOnePage, OneThreePage, OneFivePage } from '../pages/chapters';
+import { OneOnePage, OneThreePage, OneFivePage, OneFourPage } from '../pages/chapters';
 
 import { ChapterCodeService } from '../pages/chapters/chapter.code.service';
 
@@ -24,6 +24,7 @@ import { AceEditorDirective, AceEditorComponent } from 'ng2-ace-editor';
     Chapter1Page,
     OneOnePage,
     OneThreePage,
+    OneFourPage,
     OneFivePage
   ],
   imports: [
@@ -38,6 +39,7 @@ import { AceEditorDirective, AceEditorComponent } from 'ng2-ace-editor';
     Chapter1Page,
     OneOnePage,
     OneThreePage,
+    OneFourPage,
     OneFivePage
   ],
   providers: [
