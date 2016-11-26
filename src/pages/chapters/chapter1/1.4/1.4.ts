@@ -41,13 +41,13 @@ export class OneFourPage implements AfterViewInit {
 
     let replaceSpaces = new ReplaceSpaces();
 
-    this.answer1 = replaceSpaces.replace( this.test1string1 ).toString(); 
+    this.answer1 = replaceSpaces.replace( this.test1string1 ); 
   }
 
   runTest2() {
 
     let replaceSpaces = new ReplaceSpaces();
 
-    this.answer2 = replaceSpaces.replace( this.test2string1 ).toString(); 
+    this.answer2 = replaceSpaces.replace( this.test2string1 ); 
   }
 }

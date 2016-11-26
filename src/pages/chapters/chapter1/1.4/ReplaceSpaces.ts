@@ -1,7 +1,9 @@
 export class ReplaceSpaces {
     
-    replace( input ): boolean {
+    replace( input ): string {
 
-        return true;
+        let answer = input.trim().split(' ').join('%20');
+
+        return answer;
     }
 }
