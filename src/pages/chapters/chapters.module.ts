@@ -10,6 +10,9 @@ import { AceEditorComponent } from 'ng2-ace-editor';
 import { Chapter1Page }       from './chapter1/chapter1';
 import { OneOnePage, OneThreePage, OneFivePage, OneFourPage } from './chapter1';
 
+import { Chapter2Page }       from './chapter2/chapter2';
+// import { TwoOnePage } from './chapter2';
+
 import { ChapterCodeService } from './chapter.code.service';
 
 @NgModule({
@@ -17,26 +20,39 @@ import { ChapterCodeService } from './chapter.code.service';
         FormsModule,
         HttpModule,
         IonicModule.forRoot(Chapter1Page),
+        IonicModule.forRoot(Chapter2Page),
     ],
     
     declarations: [
         AceEditorComponent,
 
         Chapter1Page,
-
         OneOnePage,
         OneThreePage,
         OneFourPage,
-        OneFivePage
+        OneFivePage,
+
+        Chapter2Page,
+        // TwoOnePage,
+        // TwoTwoPage,
+        // TwoThreePage,
+        // TwoFourPage,
+        // TwoFivePage,
     ],
     entryComponents: [
         OneOnePage,
         OneThreePage,
         OneFourPage,
-        OneFivePage
+        OneFivePage,
+        // TwoOnePage,
+        // TwoTwoPage,
+        // TwoThreePage,
+        // TwoFourPage,
+        // TwoFivePage,
     ],
     exports:      [ 
-        Chapter1Page
+        Chapter1Page,
+        Chapter2Page
     ],
     providers:    [ 
         ChapterCodeService
