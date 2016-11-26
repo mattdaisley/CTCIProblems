@@ -5,8 +5,7 @@ import { Platform, MenuController, Nav } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 
 import { HomePage } from '../pages/home/home';
-import { Chapter1Page } from '../pages/chapters';
-import { Chapter2Page } from '../pages/chapters';
+import { Chapter1Page, Chapter2Page, Chapter3Page } from '../pages/chapters';
 
 
 @Component({
@@ -29,7 +28,8 @@ export class MyApp {
     this.pages = [
       { title: 'Home', component: HomePage },
       { title: 'Chapter 1', component: Chapter1Page },
-      { title: 'Chapter 2', component: Chapter2Page }
+      { title: 'Chapter 2', component: Chapter2Page },
+      { title: 'Chapter 3', component: Chapter3Page }
     ];
   }
 

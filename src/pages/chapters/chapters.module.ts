@@ -13,6 +13,9 @@ import { OneOnePage, OneThreePage, OneFivePage, OneFourPage } from './chapter1';
 import { Chapter2Page }       from './chapter2/chapter2';
 // import { TwoOnePage } from './chapter2';
 
+import { Chapter3Page }       from './chapter3/chapter3';
+// import { ThreeOnePage } from './chapter3';
+
 import { ChapterCodeService } from './chapter.code.service';
 
 @NgModule({
@@ -21,6 +24,7 @@ import { ChapterCodeService } from './chapter.code.service';
         HttpModule,
         IonicModule.forRoot(Chapter1Page),
         IonicModule.forRoot(Chapter2Page),
+        IonicModule.forRoot(Chapter3Page),
     ],
     
     declarations: [
@@ -38,21 +42,36 @@ import { ChapterCodeService } from './chapter.code.service';
         // TwoThreePage,
         // TwoFourPage,
         // TwoFivePage,
+
+        Chapter3Page,
+        // ThreeOnePage,
+        // ThreeTwoPage,
+        // ThreeThreePage,
+        // ThreeFourPage,
+        // ThreeFivePage,
     ],
     entryComponents: [
         OneOnePage,
         OneThreePage,
         OneFourPage,
         OneFivePage,
+
         // TwoOnePage,
         // TwoTwoPage,
         // TwoThreePage,
         // TwoFourPage,
         // TwoFivePage,
+
+        // ThreeOnePage,
+        // ThreeTwoPage,
+        // ThreeThreePage,
+        // ThreeFourPage,
+        // ThreeFivePage,
     ],
     exports:      [ 
         Chapter1Page,
-        Chapter2Page
+        Chapter2Page,
+        Chapter3Page,
     ],
     providers:    [ 
         ChapterCodeService
