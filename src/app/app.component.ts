@@ -11,6 +11,7 @@ import { Chapter1Page, Chapter2Page, Chapter3Page } from '../pages/chapters';
 @Component({
   templateUrl: 'app.html'
 })
+
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
