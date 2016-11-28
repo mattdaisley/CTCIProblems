@@ -7,7 +7,6 @@ import { ChapterCodeService } from '../../chapter.code.service';
 import { IsUnique } from './IsUnique';
 
 
-
 @Component({
   templateUrl: 'template.html'
 })
