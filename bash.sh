@@ -10,7 +10,7 @@ ENDCOMMIT="$(git log --pretty=format:"%H" -1)"
 
 # mkdir -p mattBuild
 
-git diff --name-only $STARTCOMMIT..$ENDCOMMIT) | {
+git diff --name-only $STARTCOMMIT..$ENDCOMMIT | {
   while IFS= read -r line
   do
     echo "copying $line"
