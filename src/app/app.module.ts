@@ -24,4 +24,5 @@ import { PagesModule } from '../pages/pages.module';
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
+
 export class AppModule {}
